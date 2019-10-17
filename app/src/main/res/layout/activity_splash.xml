@@ -4,35 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#43D5EE"
     android:orientation="vertical"
-    tools:context=".SplashActivity"
-    android:background="#43D5EE">
+    tools:context=".SplashActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="365"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
         android:gravity="center"
         android:orientation="vertical">
 
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save Memories"
+            android:fontFamily="cursive"
+            android:text="Save Memory"
             android:textColor="#fff"
             android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Tự hào ứng dụng việt"
+            android:textColor="#fff"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-2019 Created by Nguyen Huu Tuan"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
 </LinearLayout>
