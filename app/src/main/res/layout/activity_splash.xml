@@ -51,7 +51,7 @@
             android:fontFamily="serif"
             android:text="Tự hào ứng dụng việt"
             android:textColor="#fff"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ProgressBar

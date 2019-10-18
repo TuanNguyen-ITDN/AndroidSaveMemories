@@ -3,20 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UpdateActivity">
+    tools:context=".UpdateActivity"
+    android:background="#F08CDD">
 
-    <EditText
-        android:id="@+id/edit_text_Memory"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Memory"/>
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_Update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Save Memory"
+            android:textColor="#fff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_text_Memory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Memory"
+            android:textColor="#F8F6F6"/>
+
+        <Button
+            android:id="@+id/btn_Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:background="#4CE7E7"
+            android:bottomLeftRadius="10dp"
+            android:bottomRightRadius="10dp"
+            android:textColor="#F7043D"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"/>
+
+    </LinearLayout>
 </LinearLayout>

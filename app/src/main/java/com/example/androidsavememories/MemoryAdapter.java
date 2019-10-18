@@ -1,12 +1,15 @@
 package com.example.androidsavememories;
 
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -42,6 +45,7 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
             @Override
             public void onClick(View view) {
                 onClick.onClickItemDelete(position);
+
             }
         });
 
@@ -72,4 +76,6 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
             btnDelete = itemView.findViewById(R.id.deleteTask);
         }
     }
+
+
 }

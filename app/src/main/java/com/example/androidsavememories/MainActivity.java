@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements MemoryAdapter.OnI
         btn_Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAlertConfirm("Cofirm", "Would you like to add a new memory ");
+                showAlertConfirm("Cofirm", "Which one ưould you like to add? ");
             }
         });
     }
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements MemoryAdapter.OnI
                         memoryAdapter = new MemoryAdapter(this, memories);
                         memoryAdapter.setOnClick(MainActivity.this);
                         recyclerviewMemory.setAdapter(memoryAdapter);
-                        Toast.makeText(MainActivity.this, "size" + memories.size(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "size" + memories.size(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 return null;
@@ -83,47 +83,71 @@ public class MainActivity extends AppCompatActivity implements MemoryAdapter.OnI
 
     @Override
     public void onClickItemDelete(final int position) {
-        Log.i("TAG", "clicked at " + position);
-
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... voids) {
-                db.memoryDao().delete(memories.get(position));
-                Log.i("TAG", "delete success");
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                super.onPostExecute(aVoid);
-                memoryAdapter.memory.remove(position);
-                memoryAdapter.notifyDataSetChanged();
-            }
-        }.execute();
+        showAlertDelete(position);
     }
 
-
-    private void showAlertConfirm(String title, String message) {
+    private void showAlertDelete(final int position) {
         new AlertDialog.Builder(this)
-                .setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setTitle("Confirm")
+                .setMessage("Are you sure?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        openAddMemoryScreen();
+                        Toast.makeText(MainActivity.this, memories.get(position).getDescription() + " has been deleted", Toast.LENGTH_SHORT).show();
+                        new AsyncTask<Void, Void, Void>() {
+                            @Override
+                            protected Void doInBackground(Void... voids) {
+                                db.memoryDao().delete(memories.get(position));
+                                return null;
+                            }
+
+                            @Override
+                            protected void onPostExecute(Void aVoid) {
+                                super.onPostExecute(aVoid);
+                                memoryAdapter.memory.remove(position);
+                                memoryAdapter.notifyDataSetChanged();
+
+
+                            }
+
+                        }.execute();
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        //Lam chi do
                     }
                 })
                 .show();
     }
 
+    private void showAlertConfirm(String title, String message) {
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Add Text", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        openAddMemoryScreen();
+                    }
+                })
+                .setNegativeButton("Add Image", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        openAddMemoryImageScreen();
+                    }
+                })
+                .show();
+    }
+
+
     private void openAddMemoryScreen() {
         Intent intent = new Intent(MainActivity.this, AddMemory_Activity.class);
+        startActivity(intent);
+    }
+
+    private void openAddMemoryImageScreen() {
+        Intent intent = new Intent(MainActivity.this, AddImageMemory_Activity.class);
         startActivity(intent);
     }
 }

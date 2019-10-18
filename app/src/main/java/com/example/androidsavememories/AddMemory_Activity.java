@@ -42,6 +42,7 @@ public class AddMemory_Activity extends AppCompatActivity {
             Toast.makeText(this, "Memory must not null", Toast.LENGTH_SHORT).show();
             return;
         }
+        Toast.makeText(this, Memory + "has been added successfully", Toast.LENGTH_SHORT).show();
 
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -55,7 +56,7 @@ public class AddMemory_Activity extends AppCompatActivity {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(AddMemory_Activity.this, Memory + " has been added successfully", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(AddMemory_Activity.this, Memory + " has been added successfully", Toast.LENGTH_SHORT).show();
 
             }
         }.execute();
