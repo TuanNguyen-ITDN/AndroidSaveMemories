@@ -14,7 +14,6 @@
         android:gravity="center"
         android:orientation="vertical">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,13 +46,8 @@
             android:id="@+id/btn_AddMemory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#DFB8E6"
-            android:bottomLeftRadius="10dp"
-            android:bottomRightRadius="10dp"
+            android:background="@drawable/circle"
             android:text="Add Memory"
-            android:textColor="#DC04F7"
-            android:topLeftRadius="10dp"
-            android:topRightRadius="10dp" />
-
+            android:textColor="#DC04F7" />
     </LinearLayout>
 </LinearLayout>

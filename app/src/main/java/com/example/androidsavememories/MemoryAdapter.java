@@ -20,12 +20,14 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
 
     public interface OnItemClicked {
         void onClickItemDelete(int position);
+
         void onClickItemUpdate(int position);
     }
 
     public void setOnClick(OnItemClicked onClick) {
         this.onClick = onClick;
     }
+
     public MemoryAdapter(Runnable mainActivity, List<Memory> memories) {
         memory = memories;
     }
@@ -76,6 +78,4 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
             btnDelete = itemView.findViewById(R.id.deleteTask);
         }
     }
-
-
 }

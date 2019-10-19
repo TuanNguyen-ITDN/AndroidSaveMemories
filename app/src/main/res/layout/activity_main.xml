@@ -7,15 +7,25 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Save Memory" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Save Memory"
+            android:textColor="#DF08F7"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -23,23 +33,26 @@
             android:id="@+id/recyclerview_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EEF3E5" />
+            android:background="#DEF5B4" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="111dp"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:gravity="center|bottom">
 
         <Button
             android:id="@+id/btn_ADD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@android:drawable/ic_input_add"
-            android:text="Add event"
-            android:layout_marginRight="5dp"/>
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FCFCFC"
+            android:textSize="40dp" />
     </LinearLayout>
 
 </LinearLayout>

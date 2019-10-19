@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAAAEB"
     android:orientation="vertical"
-    tools:context=".UpdateActivity"
-    android:background="#F08CDD">
+    tools:context=".UpdateActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,19 +41,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="Memory"
-            android:textColor="#F8F6F6"/>
+            android:textColor="#F8F6F6" />
 
         <Button
             android:id="@+id/btn_Update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/circle"
             android:text="Update"
-            android:background="#4CE7E7"
-            android:bottomLeftRadius="10dp"
-            android:bottomRightRadius="10dp"
-            android:textColor="#F7043D"
-            android:topLeftRadius="10dp"
-            android:topRightRadius="10dp"/>
+            android:textColor="#F7043D" />
 
     </LinearLayout>
 </LinearLayout>
