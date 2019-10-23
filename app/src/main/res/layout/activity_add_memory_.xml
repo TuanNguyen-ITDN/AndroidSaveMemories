@@ -8,11 +8,7 @@
     android:orientation="vertical"
     tools:context=".AddMemory_Activity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,13 +17,16 @@
             android:text="Save Memory"
             android:textColor="#fff"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,6 +40,28 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="Memory" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_AddDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Memory"
+                android:textColor="#DC04F7" />
+
+            <EditText
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="20/10/1999" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_AddMemory"

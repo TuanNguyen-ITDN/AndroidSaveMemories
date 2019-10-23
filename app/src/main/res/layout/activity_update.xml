@@ -8,48 +8,55 @@
     android:orientation="vertical"
     tools:context=".UpdateActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="cursive"
+        android:text="Save Memory"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="cursive"
-            android:text="Save Memory"
-            android:textColor="#fff"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
 
         <EditText
             android:id="@+id/edit_text_Memory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
             android:hint="Memory"
             android:textColor="#F8F6F6" />
 
-        <Button
-            android:id="@+id/btn_Update"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edit_text_date"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/circle"
-            android:text="Update"
-            android:textColor="#F7043D" />
-
+            android:hint="Memory"
+            android:textColor="#F8F6F6" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:text="Update"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="#F7043D" />
 </LinearLayout>

@@ -42,6 +42,7 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
     @Override
     public void onBindViewHolder(@NonNull MemoryAdapter.MemoryViewHolder holder, final int position) {
         holder.tvMemory.setText(memory.get(position).getDescription());
+        holder.tvDate.setText(memory.get(position).getDate());
 
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,11 +70,13 @@ public class MemoryAdapter extends RecyclerView.Adapter<MemoryAdapter.MemoryView
 
     class MemoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvMemory;
+        TextView tvDate;
         Button btnUpdate, btnDelete;
 
         public MemoryViewHolder(@NonNull View itemView) {
             super(itemView);
             tvMemory = itemView.findViewById(R.id.tvMemory);
+            tvDate = itemView.findViewById(R.id.tvDate);
             btnUpdate = itemView.findViewById(R.id.updateTask);
             btnDelete = itemView.findViewById(R.id.deleteTask);
         }
