@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAAAEB"
+    android:background="#5EDBF1"
     android:orientation="vertical"
     tools:context=".UpdateActivity">
 
@@ -27,27 +27,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        >
+        android:background="@drawable/border_liner">
 
         <EditText
             android:id="@+id/edit_text_Memory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="30dp"
-            android:hint="Memory"
-            android:textColor="#F8F6F6" />
+            android:layout_marginTop="30dp"
+            android:hint="Memory" />
 
-        <EditText
-            android:id="@+id/edit_text_date"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Memory"
-            android:textColor="#F8F6F6" />
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/btn_AddDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Memory"
+
+                android:textColor="#DC04F7" />
+
+            <TextView
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="20/10/1999" />
+        </LinearLayout>
     </LinearLayout>
 
     <Button

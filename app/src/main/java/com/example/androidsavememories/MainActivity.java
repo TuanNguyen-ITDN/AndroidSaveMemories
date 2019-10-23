@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements MemoryAdapter.OnI
         Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
         intent.putExtra("id", memory.getId());
         intent.putExtra("memory", memory.getDescription());
+        intent.putExtra("date", memory.getDate());
         startActivity(intent);
     }
 

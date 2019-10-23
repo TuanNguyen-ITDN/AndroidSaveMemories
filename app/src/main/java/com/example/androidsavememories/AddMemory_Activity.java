@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.ParseException;
@@ -53,7 +54,7 @@ public class AddMemory_Activity extends AppCompatActivity {
         final EditText edit_text_memory = (EditText) findViewById(R.id.edit_text_Memory);
         Memory = edit_text_memory.getText().toString();
 
-        final EditText edit_text_Date = (EditText) findViewById(R.id.edit_date);
+        final TextView edit_text_Date = (TextView) findViewById(R.id.edit_date);
         newDate = edit_text_Date.getText().toString();
 
         if (Memory.isEmpty()) {
@@ -82,7 +83,7 @@ public class AddMemory_Activity extends AppCompatActivity {
     }
 
     void showDateTimePicker() {
-        final EditText edit_text_Date = (EditText) findViewById(R.id.edit_date);
+        final TextView edit_text_Date = (TextView) findViewById(R.id.edit_date);
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
