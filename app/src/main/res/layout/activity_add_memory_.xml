@@ -32,9 +32,9 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/border_liner"
         android:gravity="center"
-        android:orientation="vertical"
-        android:background="@drawable/border_liner">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/edit_text_Memory"
@@ -47,16 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp">
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_AddDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Memory"
-
+                android:background="#8AE7E7"
+                android:text="Add Date"
                 android:textColor="#DC04F7" />
 
             <TextView

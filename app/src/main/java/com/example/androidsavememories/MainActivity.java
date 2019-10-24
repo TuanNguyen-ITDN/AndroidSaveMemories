@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements MemoryAdapter.OnI
         btn_Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAlertConfirm("Cofirm", "Which one ưould you like to add? ");
+                showAlertConfirm("Cofirm", "Which one would you like to add? ");
             }
         });
     }
